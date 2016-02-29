@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-0": {
+            "RasPiSecurity\\":"src/"
+        }
+    },
+    "require": {
+        "symfony/symfony": "^3.0"
+    }
+}

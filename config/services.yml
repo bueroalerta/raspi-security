@@ -1,0 +1,33 @@
+services:
+    security:
+        class: RasPiSecurity\Security
+        arguments:
+            - %auth_users%
+            - "@request_stack"
+
+    pi_repository:
+        class: RasPiSecurity\PiRepository
+        arguments:
+            - %pis%
+
+    files_repository:
+        class: RasPiSecurity\FilesRepository
+        arguments:
+            - %base_url%
+            - %history_per_page%
+
+    url_helper:
+        class: RasPiSecurity\UrlHelper
+        arguments:
+            - "@router"
+            - %base_url%
+
+    page_renderer:
+        class: RasPiSecurity\PageRenderer
+        arguments:
+            - "@pi_repository"
+            - "@security"
+            - "@url_helper"
+            - %base_url%
+            - %title%
+            - %version%

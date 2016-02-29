@@ -1,0 +1,19 @@
+parameters:
+    title: RasPi Security
+
+    auth_users:
+        -
+            username: admin
+            password: admin
+
+    base_url: http://localhost
+
+    motion_path: /mnt/motion
+
+    pis:
+        -
+            name: pi01
+            host: pi01.home.domain.com
+        -
+            name: pi02.home.domain.com
+            host: pi02.home.domain.com
